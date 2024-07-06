@@ -56,9 +56,9 @@ getInt(const char *arg, int flags, const char *name)
 {
 	long res;
 
-	res = getNum("getIny", arg, flags, name);
+	res = getNum("getInt", arg, flags, name);
 
-	if (res > INT_MAX || res > INT_MIN)
+	if (res > INT_MAX || res < INT_MIN)
 		gnFail("getInt", "integer out of range", arg, name);
 
 	return (int) res;
